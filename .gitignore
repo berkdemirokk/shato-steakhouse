@@ -1,4 +1,5 @@
 .claude/
+.wrangler/
 download_insta.py
 images/insta/
 *.log
