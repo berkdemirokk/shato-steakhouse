@@ -4,6 +4,116 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // ====== LENIS SMOOTH SCROLL ======
+    let lenisInstance = null;
+    if (typeof Lenis !== 'undefined') {
+        lenisInstance = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            smoothWheel: true,
+            wheelMultiplier: 1.0,
+            touchMultiplier: 1.5,
+        });
+        function rafLoop(time) {
+            lenisInstance.raf(time);
+            requestAnimationFrame(rafLoop);
+        }
+        requestAnimationFrame(rafLoop);
+    }
+
+    // ====== GSAP SCROLL ANIMATIONS ======
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Sync ScrollTrigger with Lenis
+        if (lenisInstance) {
+            lenisInstance.on('scroll', ScrollTrigger.update);
+            gsap.ticker.add((time) => { lenisInstance.raf(time * 1000); });
+            gsap.ticker.lagSmoothing(0);
+        }
+
+        // Spread reveals — image scales, text fades up
+        gsap.utils.toArray('.spread').forEach((spread) => {
+            const img = spread.querySelector('.spread-image');
+            const num = spread.querySelector('.spread-num');
+            const title = spread.querySelector('.spread-title');
+            const text = spread.querySelector('.spread-text');
+            const tag = spread.querySelector('.spread-tag');
+
+            if (img) {
+                gsap.from(img, {
+                    scale: 1.2,
+                    duration: 1.8,
+                    ease: 'expo.out',
+                    scrollTrigger: { trigger: spread, start: 'top 80%', toggleActions: 'play none none none' }
+                });
+            }
+            gsap.from([num, title, text, tag].filter(Boolean), {
+                y: 60,
+                opacity: 0,
+                duration: 1.2,
+                stagger: 0.15,
+                ease: 'expo.out',
+                scrollTrigger: { trigger: spread, start: 'top 70%', toggleActions: 'play none none none' }
+            });
+        });
+
+        // Section titles
+        gsap.utils.toArray('.section-title, .collection-headline').forEach((el) => {
+            gsap.from(el, {
+                y: 80,
+                opacity: 0,
+                duration: 1.4,
+                ease: 'expo.out',
+                scrollTrigger: { trigger: el, start: 'top 85%' }
+            });
+        });
+
+        // About images parallax
+        const aboutBg = document.querySelector('.about-images');
+        if (aboutBg) {
+            gsap.to(aboutBg, {
+                backgroundPosition: '50% 80%',
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: aboutBg,
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: true
+                }
+            });
+        }
+
+        // Marquee speed-up on scroll
+        const marquee = document.querySelector('.marquee-track');
+        if (marquee) {
+            ScrollTrigger.create({
+                trigger: '.marquee',
+                start: 'top bottom',
+                end: 'bottom top',
+                onUpdate: (self) => {
+                    const v = self.getVelocity();
+                    marquee.style.animationDuration = Math.max(8, 40 - Math.abs(v) / 50) + 's';
+                }
+            });
+        }
+    }
+
+    // ====== 3D TILT ON CARDS ======
+    if (typeof VanillaTilt !== 'undefined') {
+        VanillaTilt.init(document.querySelectorAll('.feature-card'), {
+            max: 8,
+            speed: 600,
+            glare: true,
+            'max-glare': 0.15,
+            scale: 1.02,
+        });
+        VanillaTilt.init(document.querySelectorAll('.contact-card'), {
+            max: 5,
+            speed: 400,
+        });
+    }
+
     // Navbar scroll effect + scroll progress bar
     const navbar = document.getElementById('navbar');
     const progress = document.getElementById('scrollProgress');
