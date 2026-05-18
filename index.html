@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shato Steakhouse Bayrampaşa | Et ve Lezzetin Ustası</title>
+    <meta name="description" content="Shato Steakhouse Bayrampaşa - Özenle seçilmiş en kaliteli etler. Dallas, T-Bone, Antrikot, Kuzu Sırtı ve daha fazlası. Rezervasyon: 0212 437 38 84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,200;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-info">
+                <span class="status-indicator" id="liveStatus">
+                    <span class="status-dot"></span>
+                    <span class="status-text">ŞU AN AÇIK</span>
+                </span>
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 0212 437 38 84</span>
+                <span class="hide-mobile"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 12:00 — 23:00</span>
+            </div>
+            <div class="top-social">
+                <span class="top-bio">"Etin iyisi, hizmetin kalitelisi"</span>
+                <a href="https://www.instagram.com/shatosteakhouse/" target="_blank" aria-label="Instagram">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="https://www.facebook.com/shato.steakhouse/" target="_blank" aria-label="Facebook">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="#" class="logo">
+                <span class="logo-mark">S</span>
+                <span class="logo-text">
+                    <span class="logo-main">SHATO</span>
+                    <span class="logo-sub">STEAKHOUSE</span>
+                </span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Anasayfa</a></li>
+                <li><a href="#about">Hakkımızda</a></li>
+                <li><a href="#menu">Menü</a></li>
+                <li><a href="#gallery">Galeri</a></li>
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+            <a href="#reservation" class="btn btn-primary nav-cta">Rezervasyon</a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menüyü Aç">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-side hero-side-left">
+            <span class="hero-side-label">EST. BAYRAMPAŞA</span>
+        </div>
+        <div class="hero-side hero-side-right">
+            <span class="hero-side-label">ETİN USTASI</span>
+        </div>
+        <div class="container hero-content">
+            <span class="hero-tagline"><span>◆</span> Bayrampaşa'nın Et Ustası <span>◆</span></span>
+            <h1 class="hero-title">Etin <em>Sanatı</em><br>Lezzetin <em>Geleneği</em></h1>
+            <p class="hero-desc">Özenle seçilmiş kaliteli etlerimiz, usta ellerimiz ve sıcak atmosferimizle Bayrampaşa'da unutulmaz bir lezzet yolculuğuna davet ediyoruz.</p>
+            <div class="hero-actions">
+                <a href="#menu" class="btn btn-primary">
+                    <span>Menüyü Keşfet</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <a href="#reservation" class="btn btn-outline">Rezervasyon Yap</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-num" data-count="100" data-suffix="%">%100</span>
+                    <span class="stat-label">Taze Et</span>
+                </div>
+                <div class="stat stat-divider">
+                    <span class="stat-num">★ ★ ★ ★ ★</span>
+                    <span class="stat-label">Memnuniyet</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">7/7</span>
+                    <span class="stat-label">Açığız</span>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down" aria-label="Aşağı kaydır">
+            <span class="scroll-line"></span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee">
+        <div class="marquee-track">
+            <span>DALLAS STEAK <i>◆</i> ANTRİKOT <i>◆</i> T-BONE <i>◆</i> KUZU SIRTI <i>◆</i> SHATO BURGER <i>◆</i> KÜŞLEME <i>◆</i> ASADO KABURGA <i>◆</i> KATMER <i>◆</i> SERPME KAHVALTI <i>◆</i> LOKUM <i>◆</i></span>
+            <span aria-hidden="true">DALLAS STEAK <i>◆</i> ANTRİKOT <i>◆</i> T-BONE <i>◆</i> KUZU SIRTI <i>◆</i> SHATO BURGER <i>◆</i> KÜŞLEME <i>◆</i> ASADO KABURGA <i>◆</i> KATMER <i>◆</i> SERPME KAHVALTI <i>◆</i> LOKUM <i>◆</i></span>
+        </div>
+    </div>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="section-marker">01 / Hakkımızda</div>
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images">
+                    <div class="about-img about-img-1"></div>
+                    <div class="about-img about-img-2"></div>
+                    <div class="about-badge">
+                        <span class="badge-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+                        </span>
+                        <span class="badge-text">Usta<br>Ellerden</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-tag">Hakkımızda</span>
+                    <h2 class="section-title">Geleneksel Lezzeti <em>Modern Sofralara</em> Taşıyoruz</h2>
+                    <p class="lead">Shato Steakhouse, Bayrampaşa'nın kalbinde et severlere özel bir lezzet durağı.</p>
+                    <p>Et seçiminden pişirme tekniğine, sunum detaylarından servis kalitesine kadar her aşamada en yüksek standardı hedefliyoruz. Usta kasaplarımızın özenle dinlendirdiği etlerimiz, alev üstünde tam kıvamında pişirilerek sofralarınıza taşınıyor.</p>
+                    <ul class="about-features">
+                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Günlük taze, dinlendirilmiş etler</li>
+                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Usta kasap ve şef kadrosu</li>
+                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Aile dostu sıcak atmosfer</li>
+                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Otopark & açık alan oturma</li>
+                    </ul>
+                    <a href="#menu" class="btn btn-primary">Menüyü İncele</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+                    </div>
+                    <h3>Premium Et</h3>
+                    <p>Özenle seçilmiş, dinlendirilmiş kaliteli etler</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    </div>
+                    <h3>Geniş Menü</h3>
+                    <p>Steaklerden burgerlere zengin lezzet seçenekleri</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    </div>
+                    <h3>Aile Dostu</h3>
+                    <p>Sıcak atmosfer, samimi servis, her yaşa uygun</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3>Geniş Saatler</h3>
+                    <p>Her gün 12:00 - 23:00 arası hizmetinizdeyiz</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu -->
+    <section class="menu-section" id="menu">
+        <div class="section-marker">02 / Menü</div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Menümüz</span>
+                <h2 class="section-title">Lezzetli <em>Çeşitlerimiz</em></h2>
+                <p class="section-sub">Her damak zevkine hitap eden özenle hazırlanmış menümüzü keşfedin</p>
+            </div>
+
+            <div class="menu-tabs">
+                <button class="menu-tab active" data-tab="steaks">Steakler</button>
+                <button class="menu-tab" data-tab="meats">Et Çeşitleri</button>
+                <button class="menu-tab" data-tab="burgers">Burger & Köfte</button>
+                <button class="menu-tab" data-tab="starters">Mezeler</button>
+                <button class="menu-tab" data-tab="salads">Salatalar</button>
+                <button class="menu-tab" data-tab="breakfast">Kahvaltı</button>
+                <button class="menu-tab" data-tab="desserts">Tatlılar</button>
+            </div>
+
+            <div class="menu-panels">
+                <!-- Steaks -->
+                <div class="menu-panel active" data-panel="steaks">
+                    <div class="menu-grid">
+                        <div class="menu-item featured">
+                            <h4>Dallas Steak</h4>
+                            <p>Kemikli özel kesim, ızgarada usta elinden</p>
+                            <span class="menu-tag">Şefin Önerisi</span>
+                        </div>
+                        <div class="menu-item">
+                            <h4>T-Bone Steak</h4>
+                            <p>Bonfile ve antrikot bir arada, klasik kesim</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Antrikot</h4>
+                            <p>Mermerli yapısıyla yumuşak ve aromalı</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>New York Steak</h4>
+                            <p>Dana sırt, klasik Amerikan kesim</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Asado Dana Kaburga</h4>
+                            <p>Yavaş pişirilmiş sulu ve yumuşak kaburga</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Lokum</h4>
+                            <p>Ağızda dağılan özel kesim bonfile</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Et Çeşitleri -->
+                <div class="menu-panel" data-panel="meats">
+                    <div class="menu-grid">
+                        <div class="menu-item featured">
+                            <h4>Süt Kuzu Kafes Kaburga</h4>
+                            <p>Özel sunum, fırında usta elinden — kalabalık sofralara</p>
+                            <span class="menu-tag">Aile Boyu</span>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Shato Spesiyal</h4>
+                            <p>Evin imzası, özel et tabağı</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Kuzu Sırtı</h4>
+                            <p>Yumuşacık taze kuzu eti, ızgara</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Küşleme</h4>
+                            <p>İnce kesim ızgara dana</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Leblebi</h4>
+                            <p>Özel kesim sulu et</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Burgers -->
+                <div class="menu-panel" data-panel="burgers">
+                    <div class="menu-grid">
+                        <div class="menu-item featured">
+                            <h4>Shato Burger</h4>
+                            <p>Özel köfte, bacon, cheddar, karamelize soğan, ev usulü baharatlı patates</p>
+                            <span class="menu-tag">Popüler</span>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Lokum Burger</h4>
+                            <p>Bonfile dilimleri, cheddar, karamelize soğan, dana bacon, baharatlı patates</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Cheese Burger</h4>
+                            <p>Özel köfte, soğan, cheddar, baharatlı patates eşliğinde</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Kasap Köfte</h4>
+                            <p>Özel harç köfte, baharatlı patates ile</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Kaşarlı Köfte</h4>
+                            <p>Köfte, eritilmiş kaşar, baharatlı patates</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mezeler -->
+                <div class="menu-panel" data-panel="starters">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <h4>Sıcak Füme</h4>
+                            <p>Tütsülenmiş dana eti, parmesan ve cheddar peyniri</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Soğuk Füme</h4>
+                            <p>İnce dilimlenmiş tütsülenmiş dana eti</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>İstiridye Mantarı Izgara</h4>
+                            <p>Taze istiridye mantarı, özel sosuyla</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Patates Tava</h4>
+                            <p>Çıtır çıtır ev usulü baharatlı patates</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Salads -->
+                <div class="menu-panel" data-panel="salads">
+                    <div class="menu-grid">
+                        <div class="menu-item featured">
+                            <h4>Biftek Salatası</h4>
+                            <p>Akdeniz yeşillikleri, jülyen biftek, çeri domates, parmesan</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Çeri Domates Salatası</h4>
+                            <p>Çeri domates, taze otlar, zeytinyağı</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Çoban Salatası</h4>
+                            <p>Klasik tarifimizle taze sebzeler</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Tulum Peyniri Salatası</h4>
+                            <p>Akdeniz yeşillikleri ve özel tulum peyniri</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Breakfast -->
+                <div class="menu-panel" data-panel="breakfast">
+                    <div class="menu-grid">
+                        <div class="menu-item featured">
+                            <h4>Serpme Kahvaltı</h4>
+                            <p>Zengin Türk kahvaltısı, çeşit çeşit peynir, reçel, börek ve daha fazlası</p>
+                            <span class="menu-tag">Hafta Sonu Favorisi</span>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Sucuk Yumurta</h4>
+                            <p>Özel sucuk ve taze köy yumurtası</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Menemen</h4>
+                            <p>Klasik tarifimizle domates, biber ve yumurta</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Sahanda Yumurta</h4>
+                            <p>Çift taraflı veya tek taraflı tercihinize göre</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu-panel" data-panel="desserts">
+                    <div class="menu-grid">
+                        <div class="menu-item featured">
+                            <h4>Katmer</h4>
+                            <p>Antep usulü, fıstıklı, taze yapım, sıcak servis</p>
+                            <span class="menu-tag">Ev Yapımı</span>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Rende Kabak Tatlısı</h4>
+                            <p>Ev yapımı, cevizli, geleneksel tarif</p>
+                        </div>
+                        <div class="menu-item">
+                            <h4>Trileçe</h4>
+                            <p>Üç sütlü efsane tatlı, karamelli süslemesiyle</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-cta">
+                <p>Menümüz mevsime göre değişebilir. Güncel fiyatlar ve detaylar için lütfen bizi arayın.</p>
+                <a href="tel:+902124373884" class="btn btn-outline">Bizi Arayın: 0212 437 38 84</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery" id="gallery">
+        <div class="section-marker section-marker-light">03 / Galeri</div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Galeri</span>
+                <h2 class="section-title">Lezzetin <em>Görsel Şöleni</em></h2>
+                <p class="section-sub">Mutfağımızdan ve mekanımızdan kareler</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item gallery-1"></div>
+                <div class="gallery-item gallery-2"></div>
+                <div class="gallery-item gallery-3"></div>
+                <div class="gallery-item gallery-4"></div>
+                <div class="gallery-item gallery-5"></div>
+                <div class="gallery-item gallery-6"></div>
+            </div>
+            <div class="gallery-cta">
+                <a href="https://www.instagram.com/shatosteakhouse/" target="_blank" class="btn btn-primary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    Instagram'da Daha Fazla
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation -->
+    <section class="reservation" id="reservation">
+        <div class="section-marker">04 / Rezervasyon</div>
+        <div class="container">
+            <div class="reservation-grid">
+                <div class="reservation-info">
+                    <span class="section-tag">Rezervasyon</span>
+                    <h2 class="section-title">Masanızı <em>Şimdiden</em> Ayırtın</h2>
+                    <p>Özel günleriniz, iş yemekleri veya aile sofralarınız için size özel masa hazırlayalım. Hafta sonu ve özel günlerde rezervasyon önerilir.</p>
+                    <div class="reservation-contact">
+                        <a href="tel:+902124373884" class="contact-card">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">Hemen Ara</span>
+                                <span class="contact-value">0212 437 38 84</span>
+                            </div>
+                        </a>
+                        <a href="https://wa.me/902124373884" target="_blank" class="contact-card">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">WhatsApp</span>
+                                <span class="contact-value">Mesaj Gönder</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <form class="reservation-form" id="reservationForm">
+                    <h3>Online Rezervasyon</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Ad Soyad</label>
+                            <input type="text" id="name" name="name" required placeholder="Adınız Soyadınız">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="05XX XXX XX XX">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Tarih</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Saat</label>
+                            <select id="time" name="time" required>
+                                <option value="">Seçiniz</option>
+                                <option value="12:00">12:00</option>
+                                <option value="13:00">13:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="18:00">18:00</option>
+                                <option value="19:00">19:00</option>
+                                <option value="20:00">20:00</option>
+                                <option value="21:00">21:00</option>
+                                <option value="22:00">22:00</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Kişi Sayısı</label>
+                        <select id="guests" name="guests" required>
+                            <option value="">Seçiniz</option>
+                            <option value="2">2 Kişi</option>
+                            <option value="3">3 Kişi</option>
+                            <option value="4">4 Kişi</option>
+                            <option value="5">5 Kişi</option>
+                            <option value="6">6 Kişi</option>
+                            <option value="7+">7+ Kişi</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="notes">Not (İsteğe Bağlı)</label>
+                        <textarea id="notes" name="notes" rows="3" placeholder="Özel istekleriniz, doğum günü, yıl dönümü..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Rezervasyon Talebi Gönder</button>
+                    <p class="form-note">Talebiniz alındıktan sonra en kısa sürede sizi arayacağız.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="section-marker section-marker-light">05 / İletişim</div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">İletişim</span>
+                <h2 class="section-title">Bize <em>Ulaşın</em></h2>
+                <p class="section-sub">Bayrampaşa'da sizi ağırlamak için sabırsızlanıyoruz</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info-block">
+                    <h3>Restoran Bilgileri</h3>
+                    <p>Sorularınız, önerileriniz veya özel etkinlik organizasyonları için bize ulaşın.</p>
+                    <ul class="contact-list">
+                        <li>
+                            <div class="contact-list-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <span class="label">Adres</span>
+                                <span>Yıldırım Mh., Avasköy Yolu Cd. No:82, 34045 Bayrampaşa / İstanbul</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-list-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div>
+                                <span class="label">Telefon</span>
+                                <a href="tel:+902124373884">0212 437 38 84</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-list-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <div>
+                                <span class="label">Çalışma Saatleri</span>
+                                <span>Pazartesi - Pazar: 12:00 - 23:00</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="contact-actions">
+                        <a href="https://www.google.com/maps/search/Shato+Steakhouse+Bayrampa%C5%9Fa" target="_blank" class="btn btn-outline btn-sm">Haritada Aç</a>
+                        <a href="tel:+902124373884" class="btn btn-primary btn-sm">Hemen Ara</a>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://www.instagram.com/shatosteakhouse/" target="_blank" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/shato.steakhouse/" target="_blank" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="https://wa.me/902124373884" target="_blank" aria-label="WhatsApp">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps?q=Avask%C3%B6y+Yolu+Cd.+No:82,+Bayrampa%C5%9Fa+%C4%B0stanbul&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-mark">S</span>
+                        <span class="logo-text">
+                            <span class="logo-main">SHATO</span>
+                            <span class="logo-sub">STEAKHOUSE</span>
+                        </span>
+                    </a>
+                    <p>Bayrampaşa'nın efsane steakhouse'u. Kaliteli et, samimi servis, unutulmaz lezzetler.</p>
+                    <div class="footer-socials">
+                        <a href="https://www.instagram.com/shatosteakhouse/" target="_blank" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/shato.steakhouse/" target="_blank" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Hızlı Erişim</h4>
+                    <ul>
+                        <li><a href="#about">Hakkımızda</a></li>
+                        <li><a href="#menu">Menü</a></li>
+                        <li><a href="#gallery">Galeri</a></li>
+                        <li><a href="#reservation">Rezervasyon</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>İletişim</h4>
+                    <ul>
+                        <li>Yıldırım Mh., Avasköy Yolu Cd.<br>No:82, Bayrampaşa / İstanbul</li>
+                        <li><a href="tel:+902124373884">0212 437 38 84</a></li>
+                        <li>Her gün 12:00 - 23:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Shato Steakhouse. Tüm hakları saklıdır.</p>
+                <p>Bayrampaşa'nın efsane lezzeti</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/902124373884" target="_blank" class="whatsapp-float" aria-label="WhatsApp ile İletişim">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
