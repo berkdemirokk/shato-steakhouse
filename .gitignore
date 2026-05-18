@@ -1,6 +1,8 @@
 .claude/
 .wrangler/
 download_insta.py
+parse_b64.py
+shato_photos_b64.txt
 images/insta/
 *.log
 .DS_Store
